@@ -1,16 +1,19 @@
 import lightgbm as lgb
 import numpy as np
 import os
-from .pefeatures import PEFeatureExtractor
+import pandas as pd
+from pefeatures import PEFeatureExtractor
 feature_extractor =  PEFeatureExtractor(2)
 
 #MODULE_PATH = os.path.dirname(os.path.abspath(__file__))
 model_path = "data/EXE_scanner-GBDT-dataset=EMBER_benign_test-AE_all.txt"
 
 class EXEscanner:
-    def __init__(self, name="EXE_scanner-GBDT-dataset=EMBER_benign_test-AE_all", model_path=model_path, threshold=0.9999941463527008):
+    def __init__(self, name="EXE_scanner-GBDT-dataset=EMBER_benign_test-AE_all", model_path=model_path, fpr=0.01):
         self.name = name
-        self.threshold = threshold
+
+        roc_data = pd.read_csv("data/EXE-scanner_roc_curve.csv")
+        self.threshold = roc_data[roc_data["fpr"] < fpr].sort_values(by="tpr", ascending=False).head(1)["thresholds"].values[0]
         self.model = lgb.Booster(model_file=model_path)
 
         self.print_info()
