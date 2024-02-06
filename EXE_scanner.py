@@ -26,11 +26,13 @@ class EXEscanner:
     def predict_proba(self, X):
          return self.model.predict(X)
     
+    # Works on raw bytes
     def get_score(self, bytez):
         features = np.array(feature_extractor.feature_vector(bytez), dtype=np.float32)
         score =  self.predict_proba([features])[0]
         return score
 
+    # Works on raw bytes
     def get_label(self, bytez):
         score = self.get_score(bytez)
         label = int(score > self.threshold)
