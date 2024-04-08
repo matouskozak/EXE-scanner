@@ -1,0 +1,2 @@
+Source codes taken from https://github.com/elastic/ember are covered by the GNU Affero General Public
+License version 3 (AGPL-v3). Other source codes and data files are covered by the MIT license.
