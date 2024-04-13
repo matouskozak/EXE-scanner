@@ -1,5 +1,6 @@
 
 #!/usr/bin/python
+# This file comes from the EMBER project: https://github.com/elastic/ember
 ''' Extracts some basic features from PE files. Many of the features
 implemented have been used in previously published works. For more information,
 check out the following resources:

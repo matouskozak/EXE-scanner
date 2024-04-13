@@ -113,6 +113,7 @@ class GBDTMalwareClassifier:
             FPR (float, optional): The desired false positive rate (FPR). Defaults to 0.01.
         """
         lgbm_dataset = lgb.Dataset(X_train, y_train)
+        # Parameters for the GBDT model from EMBER project: https://github.com/elastic/ember
         self._params = {
             "boosting": "gbdt",
             "objective": "binary",
