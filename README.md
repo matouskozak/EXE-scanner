@@ -5,7 +5,7 @@ EXE-scanner, lightweight plugin ready to be deployed with main malware classifie
 
 
 ## Download
-Download data from here: https://kaggle.com/datasets/fca93b34e3d3ed8936fb76cc06b4a7a94f9f296eebd675de2fab682857e24232
+Download dataset and pretrained models from here: https://kaggle.com/datasets/fca93b34e3d3ed8936fb76cc06b4a7a94f9f296eebd675de2fab682857e24232
 
 ## Citing
 If you use this work, pleace cite the following paper: TBA
