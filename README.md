@@ -10,11 +10,14 @@ Download dataset and pretrained models from here: https://kaggle.com/datasets/fc
 ## Citing
 If you use this work, pleace cite the following paper:
 ```
-@article{kozak2024updating,
+@article{kozak2025updating,
   title={Updating Windows Malware Detectors: Balancing Robustness and Regression against Adversarial EXEmples},
   author={Kozak, Matous and Demetrio, Luca and Trizna, Dmitrijs and Roli, Fabio},
-  journal={arXiv preprint},
-  doi={10.48550/arXiv.2405.02646},
-  year={2024}
+  journal={Computers \& Security},
+  volume={155},
+  pages={104466},
+  year={2025},
+  publisher={Elsevier},
+  doi={https://doi.org/10.1016/j.cose.2025.104466}
 }
 ```
